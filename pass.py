@@ -1,4 +1,5 @@
 #!/opt/homebrew/bin/python3
+
 import unittest
 from isPerfsqr import isSqr
 
