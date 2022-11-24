@@ -1,0 +1,28 @@
+pipeline { 
+    agent any
+    stages {
+        stage('Clone Git') {
+            steps {
+                git 'https://github.com/Blu-FiBEr/JENKINS.git'
+            }
+        }
+        stage('Build Code') {
+            steps {
+                sh "chmod u+x isPerfsqr.py"
+                sh "./isPerfsqr.py"
+            }
+        }
+        stage('Test Code Passed') {
+            steps {
+                sh "chmod u+x pass.py"
+                sh "./pass.py"
+            }
+        }
+        stage('Test Code Failed') {
+            steps {
+                sh "chmod u+x fail.py"
+                sh "./fail.py"
+            }
+        }
+    } 
+}
