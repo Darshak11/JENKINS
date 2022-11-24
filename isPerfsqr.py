@@ -1,8 +1,10 @@
 #!/usr/bin/python3
 
 import math
-def isSqr(number):    
-    root = math.sqrt(number)
-    if int(root + 0.5) ** 2 == number:
-        return 1
-    return 0
+def isSqr(x):    
+    if(x >= 0):
+        sr = int(math.sqrt(x))
+        # sqrt function returns floating value so we have to convert it into integer
+        #return boolean T/F
+        return ((sr*sr) == x)
+    return false
