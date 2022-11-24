@@ -19,7 +19,7 @@ class TestCase(unittest.TestCase):
     def testcase5(self):
         self.assertEqual(isSqr(12), 1)
 
-    def testcase5(self):
+    def testcase6(self):
         self.assertEqual(isSqr(10), 1)
 
 
