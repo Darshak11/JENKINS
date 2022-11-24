@@ -1,3 +1,4 @@
+#!/opt/homebrew/bin/python3
 import math
 def isSqr(number):    
     root = math.sqrt(number)
